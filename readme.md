@@ -8,7 +8,8 @@ Proff. Federico Flecchia e Laura Console
 
 In questo progetto si realizza una web-app per il popolare gioco dell'impiccato.
 Scopo del gioco è indovinare una parola entro un numero di tentativi, lettera per lettera. Ad ogni errore viene disegnato un segmento della figura dell'impiccato.
-E' possibile scegliere
+E' possibile scegliere se giocare con una parola casuale (estratta da un elenco con più di 500 sostantivi in italiano), oppure con una parola inserita manualmente dai propri amici.
+Il gioco termina se l'utente indovina la parola, oppure al decimo errore commesso.
 
 Questo progetto nasce in ambito didattico, pertanto l'autore ha cercato di commentare e documentare il più possibile.
 
