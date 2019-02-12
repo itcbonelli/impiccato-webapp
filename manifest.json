@@ -1,0 +1,21 @@
+{
+    "short_name": "Impiccato",
+    "name": "Impiccato",
+    "icons": [
+        {
+            "src": "immagini/app-icon-192.png",
+            "type": "image/png",
+            "sizes": "192x192"
+        },
+        {
+            "src": "immagini/app-icon-512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+    "start_url" : "index.html",
+    "background_color": "#ffffff",
+    "display": "standalone",
+    "orientation": "portrait",
+    "theme_color": "#ECECEC"
+}

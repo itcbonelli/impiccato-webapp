@@ -1,0 +1,144 @@
+body {
+	font-family:Arial, sans serif;
+	background-image: url(immagini/linedpaper.png);
+	background-repeat: repeat;
+}
+
+.main-wrapper {
+	max-width: 800px;
+	margin: 0px auto;
+}
+
+#parolaEstratta {
+	font-size:20px;
+
+}
+
+#lettereEliminate {
+	font-size:20px;
+}
+
+.lettere button.lettera {
+	display:inline-block;
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+	text-align: center;
+	text-decoration: none;
+	border: 1px solid silver;
+	margin: 0 2px 2px 0px;
+	color: inherit;
+	font-weight: 600;
+	background: #ffffff;
+	background: -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%);
+	background: -webkit-linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+	background: linear-gradient(top, #ffffff 0%,#e5e5e5 100%);
+	padding:0;
+	font-size: 18px;
+}
+
+.lettere button.scelta {
+	color: gray;
+	background-color: whitesmoke;
+}
+
+a.button { 
+	text-decoration:none;
+	color: inherit;
+}
+
+.button {
+	display:inline-block;
+	padding: 6px 20px;
+	border: 1px solid silver;
+	border-radius: 6px;
+}
+
+.button.block {
+	display:block;
+	text-align:center;
+}
+
+.img-responsive {
+	max-width: 100%;
+	height: auto;
+}
+
+.tagline {
+	color: dimgray;
+	font-size: 16px;
+	text-align:center;
+	font-family: Georgia, serif;
+	font-style: italic;
+}
+
+.tagline strong {
+	color: deeppink;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+body.intro {
+	background-color: whitesmoke;
+}
+
+.button.game {
+	background: #feccb1;
+	background: -moz-linear-gradient(top, #feccb1 0%, #f17432 50%, #ea5507 51%, #fb955e 100%);
+	background: -webkit-linear-gradient(top, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%);
+	background: linear-gradient(to bottom, #feccb1 0%,#f17432 50%,#ea5507 51%,#fb955e 100%);
+	border: 3px solid darkorange;
+	color: white;
+	text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+	box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+	font-size: 18px;
+	font-weight: bold;
+	display: block;
+	width: 100%;
+	
+}
+
+.label_tentativi {
+	text-align:center;
+	font-size: 24px;
+}
+
+#parolaEstratta {
+	box-sizing: border-box;
+	font-family: monospace;
+	letter-spacing: 4px;
+	line-height: 32px;
+	min-height: 32px;
+	text-align:center;
+	white-space: normal;
+	width: 100%;
+}
+
+.hai_perso {
+	background-color:black;
+	background-image: url(immagini/hanging1.gif);
+	background-position: center top;
+	background-size: cover;
+	background-repeat: no-repeat
+
+}
+
+.hai_perso .messaggio {
+	color: white;
+	position: fixed;
+	bottom: 0;
+	left:0;
+	right: 0;
+	background-color: rgba(0,0,0,0.8);
+	padding: 10px;
+	text-align: center;
+	font-size: 18px;
+}
+
+.madein {
+	color: gray;
+	font-size: 12px;
+	text-transform: uppercase;
+	text-align: center;
+	letter-spacing: 1px;
+}

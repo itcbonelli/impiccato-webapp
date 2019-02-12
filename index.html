@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="it" manifest="impiccato.manifest">
+
+<head>
+
+	<meta charset="UTF-8" />
+
+	<!-- Questo tag permette alla pagina di adattarsi allo schermo dei telefoni -->
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+
+	<!-- Icona dell'applicazione -->
+	<link rel="icon" href="icon.png" />
+
+	<title>Impiccato</title>
+
+	<link rel="stylesheet" href="style.css" />
+
+	<!-- Il file manifest.json permette al sito di comportarsi come un'app -->
+	<link rel="manifest" href="manifest.json" />
+
+	<!-- Direttive per dispositivi iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="immagini/app-icon-512.png" />
+	<link rel="apple-touch-startup-image" href="immagini/app-icon-512.png">
+	<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+
+</head>
+
+<body class="intro">
+	<div class="main-wrapper" style="text-align: center">
+		<p><img src="immagini/hangman1.gif" alt="Impiccato"></p>
+		<p class="tagline">
+			Il gioco dell'impiccato ci insegna, fin da piccoli, che dicendo le parole sbagliate,<br />
+			<strong>si può uccidere qualcuno!</strong>
+		</p>
+		<h3>Come vuoi giocare?</h3>
+		<p>
+			<button onclick="window.location='gioco.html#parola_casuale'; return false;" class="button block game large">Con una parola <u>c</u>asuale</button>
+		</p>
+		<p>
+			<button onclick="window.location='gioco.html#parola_scelta'; return false;" class="button block game large">Con parola <u>s</u>celta da me</button>
+		</p>
+		<p class="madein">
+			MADE WITH ❤ IN ITC BONELLI<br />
+			CLASSE 4A SIA | A.S. 2018-2019
+		</p>
+	</div>
+
+	<iframe src="suoni/success.wav" allow="autoplay" id="audio" style="display: none;"></iframe>
+
+	<script>
+		function tastoPremuto(e) {
+			//rilevo il tasto premuto
+			var tasto = e.key;
+
+			//lo mostro nella console del browser
+			console.log("Premuto tasto: " + tasto);
+			
+			//in base al tasto premuto, mando l'utente alla pagina corrispondente
+			switch (tasto) {
+				case 'c':
+				case 'C':
+					window.location = "gioco.html#parola_casuale"
+					break;
+				case 's':
+				case 'S':
+					window.location = "gioco.html#parola_scelta"
+					break;
+			}
+		}
+
+		
+		document.addEventListener("keyup", tastoPremuto);
+	</script>
+</body>
+
+</html>

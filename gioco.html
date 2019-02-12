@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="it" manifest="impiccato.manifest">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, user-scalable=no" />
+	<link rel="icon" href="icon.png" />
+	<title>Impiccato</title>
+
+	<link rel="stylesheet" href="style.css" />
+	
+	<!-- Il file manifest.json permette al sito di comportarsi come un'app -->
+	<link rel="manifest" href="manifest.json" />
+
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="immagini/app-icon-512.png" />
+	<link rel="apple-touch-startup-image" href="immagini/app-icon-512.png">
+	<meta name="apple-mobile-web-app-status-bar-style" content="white" />
+
+	<!-- Il file paroleRandom.js contiene il dizionario delle parole casuali -->
+	<script src="script/paroleRandom.js"></script>
+	<!-- Il file impiccato.js contiene la logica di gioco -->
+	<script src="script/impiccato.js"></script>
+	<!-- rilevaTasti.js gestisce la pressione dei tasti della tastiera -->
+	<script src="script/rilevaTasti.js"></script>
+
+	<script src="script/fix-ios.js"></script>
+
+</head>
+
+<body>
+	<div class="main-wrapper" style="text-align: center;">
+		<h1 class="label_tentativi"><span id="n_tentativi">10</span> tentativi rimasti</h1>
+
+		
+			<!-- Immagine iniziale; tale immagine potrebbe cambiare in function LetteraScelta....-->
+
+			<p><img src="immagini/imgStart.gif" class="img-responsive" id="imp"></p>
+
+			<!--
+		Al di sotto dell'immagine vengono collocate due caselle di testo.
+		Nella prima casella di testo si mostreranno tanti asterischi quante sono le lettere della 
+		parola da indovinare, e durante l'avanzamento del gioco, verranno scoperte le lettere indovinate.
+		La seconda casella di testo mostra le lettere già scelte.
+		-->
+
+			<form name="impiccato">
+				<p>
+					<label for="parolaEstratta">Parola da indovinare</label><br />
+					<input type="text" id="parolaEstratta" name="parolaEstratta" readonly="readonly" />
+				</p>
+			</form>
+
+			<p>
+				<!--
+				La funzione generaLettere crea gli elementi della tastiera contenente le lettere.
+				Ogni tasto è un link. L'attributo onclick contiene il nome della funzione che gestisce l'evento
+
+				Esempio:
+				<a href="#" class="lettera" id="LetteraC" onclick="scegliLettera('C')">C</a>
+				                                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+			-->
+				<div class="lettere">
+					<script>
+						generaLettere();
+					</script>
+				</div>
+			</p>
+
+			<p><a href="" onclick="window.location.reload(); return false" class="button">Altra Parola</a></p>
+
+	</div><!-- #main-wrapper -->
+	<script>
+		inizia();
+	</script>
+</body>
+
+</html>

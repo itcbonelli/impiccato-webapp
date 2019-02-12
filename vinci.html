@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it" manifest="impiccato.manifest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Impiccato: hai vinto!</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Il file manifest.json permette al sito di comportarsi come un'app -->
+    <link rel="manifest" href="manifest.json" />
+    
+
+	<!-- Icona dell'app per dispositivi iOS -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="apple-touch-icon" href="immagini/app-icon-512.png" />
+	<link rel="apple-touch-startup-image" href="immagini/app-icon-512.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+    
+
+</head>
+
+<body>
+    <div class="main-wrapper" style="text-align: center">
+        <img src="immagini/bye.gif" onclick="suono.play()" alt="Uomo salvato" class="img-responsive" />
+        <h1>Hai vinto!!!</h1>
+        <h4>La parola da indovinare era proprio:<br />
+            <script>
+                var parola = sessionStorage.getItem('parolaDaIndovinare') || 'Si è verificato un errore';
+                document.write(parola);
+            </script>!
+        </h4>
+        <p>
+            <button onclick="window.location='index.html'" class="button block game large">Nuova partita</button>
+        </p>
+
+    </div>
+
+    <script>
+
+
+        var suono = new Audio("suoni/win.wav");
+        suono.play();
+
+        
+
+
+        function tastoPremuto(e) {
+            switch (e.key) {
+                case 'n':
+                case 'N':
+                case 'Enter':
+                    window.location = 'index.html';
+                    break;
+            }
+        }
+
+        document.addEventListener('keyup', tastoPremuto);
+    </script>
+</body>
+
+</html>

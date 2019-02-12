@@ -1,0 +1,40 @@
+CACHE MANIFEST
+# v19.1.5f - 2019-01-06
+# Buona festa della Befana.
+index.html
+gioco.html
+vinci.html
+perdi.html
+style.css
+# Cartella script
+script/impiccato.js
+script/paroleRandom.js
+script/rilevaTasti.js
+script/statistiche.js
+script/fix-ios.js
+# Cartella immagini
+immagini/bye.gif
+immagini/hanging1.gif
+immagini/hangman1.gif
+immagini/hangman2.gif
+immagini/imgStart.gif
+immagini/app-icon-512.png
+immagini/app-icon-192.png
+immagini/imp1.gif
+immagini/imp2.gif
+immagini/imp3.gif
+immagini/imp4.gif
+immagini/imp5.gif
+immagini/imp6.gif
+immagini/imp7.gif
+immagini/imp8.gif
+immagini/imp9.gif
+immagini/imp10.gif
+immagini/impStart.gif
+immagini/impStart.jpg
+immagini/linedpaper.png
+# Cartella Suoni
+suoni/error.wav
+suoni/hanging.mp3
+suoni/success.wav
+suoni/win.wav

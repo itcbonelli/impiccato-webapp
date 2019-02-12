@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="it" manifest="impiccato.manifest">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hai perso all'impiccato</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Il file manifest.json permette al sito di comportarsi come un'app -->
+    <link rel="manifest" href="manifest.json" />
+
+
+    <!-- Icona dell'app per dispositivi iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="apple-touch-icon" href="immagini/app-icon-512.png" />
+    <link rel="apple-touch-startup-image" href="immagini/app-icon-512.png">
+    <meta name="apple-mobile-web-app-status-bar-style" content="white" />
+
+    <script src="script/fix-ios.js"></script>
+</head>
+
+<body>
+
+    <div class="main-wrapper" style="text-align:center">
+            <p><img src="immagini/hangman2.gif" alt="Ops!!!" class="img-responsive" onclick="suono.play()"></p>
+            <strong>HAI PERSO!!!</strong>
+            <p>La parola da indovinare era:<br />
+                <script>
+                    var parola = sessionStorage.getItem('parolaDaIndovinare') || '(si è verificato un problema)';
+                    document.write(parola);
+                </script>
+            </p>
+            <p><button onclick="window.location='index.html'" class="button game block">Nuova partita</button></p>
+    </div>
+
+
+
+    <script>
+
+        var suono = new Audio("suoni/hanging.mp3");
+        suono.play();
+
+
+        function tastoPremuto(e) {
+            switch (e.key) {
+                case 'n':
+                case 'N':
+                case 'Enter':
+                    window.location = 'index.html';
+                    break;
+            }
+        }
+
+        document.addEventListener('keyup', tastoPremuto);
+    </script>
+</body>
+
+</html>
