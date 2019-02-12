@@ -11,6 +11,7 @@
 	<icon src="icon.png" />
 	<splash src="splash.png" />
 	<plugin name="cordova-plugin-whitelist" spec="1" />
+	<plugin name="cordova-plugin-vibration" spec="3" />
 	<access origin="*" />
 	<allow-intent href="http://*/*" />
 	<allow-intent href="https://*/*" />
